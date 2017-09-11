@@ -11,7 +11,6 @@ var twitterClient = new Twitter({
  
 var twitterParams = {screen_name: "Mike_Bootcamp"};
 
-
 var Spotify = require("node-spotify-api");
  
 var spotify = new Spotify({
@@ -22,6 +21,7 @@ var spotify = new Spotify({
 var defaultTrack = "The Sign";
 var defaultArtist = "Ace of Base";
 var spotifySearch;
+var foundFlag = false;
 
 var request = require("request");
 
@@ -32,11 +32,16 @@ var parsedResponse;
 
 var fs = require("fs");
 var incomingData = [];
+var stringToWrite ="Log Entry:\n";
 
+// program execution starts here
+doStuff();
+
+// if args are to be read from file
 if(process.argv[2] === "do-what-it-says") {
 
 	// open random.txt
-	fs.readFile(process.cwd()+"\\random.txt", function(error,data) {
+	fs.readFile("random.txt", function(error,data) {
 
         if(error) {
 
@@ -56,6 +61,7 @@ if(process.argv[2] === "do-what-it-says") {
     });
 }
 
+// this is where the magic happens.
 function doStuff() {
 
 	// twitter
@@ -69,13 +75,16 @@ function doStuff() {
 		 		for(var i = 0; i < tweets.length && i < 20; i++) {
 				
 					console.log(tweets[i].text);
+					stringToWrite += (tweets[i].text + "\n");
 				}
+
+				writeToLog();
 			}
 
 		 	else {
 
 		 		console.log(JSON.stringify(error));
-		 	}
+			}
 
 		});
 	}
@@ -90,41 +99,74 @@ function doStuff() {
 
 		else {
 
+			// default search: "The Sign" by Ace of Base
 			spotifySearch = defaultTrack;
 		}
 
-		// console.log(spotifySearch);
-
-		spotify.search({ type: 'track', query: spotifySearch, limit: 1 }, function(error, data) {
+		spotify.search({ type: 'track', query: spotifySearch }, function(error, data) {
 	 
 	 		if (error) {
 
 	 			return console.log('Error occurred: ' + error);
 	 		}
 
-			// loop through "items" array...
-			for(i = 0; i < data.tracks.items.length; i++) {
+			if(spotifySearch === defaultTrack) {
 
-				console.log("Track #" + (i + 1));
+				// loop through "items" array...
+				for(var i = 0; i < data.tracks.items.length && !foundFlag; i++) {
 
-				// ...then through artist(s)
-				for(j = 0; j < data.tracks.items[i].artists.length; j++) {
+					// ...then through artist(s)
+					for(var j = 0; j < data.tracks.items[i].artists.length && !foundFlag; j++) {
 
-					console.log("Artist(s): " + data.tracks.items[i].artists[j].name);		
+						// find "Ace of Base"
+						if(data.tracks.items[i].artists[j].name === defaultArtist) {
+
+							console.log("Artist(s): " + data.tracks.items[i].artists[j].name);
+							stringToWrite += (data.tracks.items[i].artists[j].name + "\n");
+									
+							console.log("Title: " + data.tracks.items[i].name);
+							stringToWrite += (data.tracks.items[i].name + "\n");
+
+							// preview link
+							console.log("Spotify Preview Link: " + data.tracks.items[i].preview_url);
+							stringToWrite += (data.tracks.items[i].preview_url + "\n");
+
+							// album name
+							console.log("Album: " + data.tracks.items[i].album.name);
+							stringToWrite += (data.tracks.items[i].album.name + "\n");
+
+							foundFlag = true;
+						}
+					}
+				}
+			}
+
+			else {
+
+				// display first track info
+				
+				// first get all artists
+				for(i = 0; i < data.tracks.items[0].artists.length; i++) {
+
+					console.log("Artist(s): " + data.tracks.items[0].artists[i].name);
+					stringToWrite += (data.tracks.items[0].artists[i].name + "\n");
 				}
 
-				// song title
-				console.log("Title: " + data.tracks.items[i].name);
+				console.log("Title: " + data.tracks.items[0].name);
+				stringToWrite += (data.tracks.items[0].name + "\n");
 
-				// preview link
-				console.log("Spotify Preview Link: " + data.tracks.items[i].preview_url);
+				console.log("Spotify Preview Link: " + data.tracks.items[0].preview_url);
+				stringToWrite += (data.tracks.items[0].preview_url + "\n");
 
-				// album name
 				console.log("Album: " + data.tracks.items[i].album.name);
-
-				// space
-				console.log();
+				stringToWrite += (data.tracks.items[0].album.name + "\n");				
 			}
+
+			// space
+			console.log();
+
+			// write stringToWrite
+			writeToLog();
 		});
 	}
 
@@ -145,7 +187,7 @@ function doStuff() {
 		movieQueryURL = "http://www.omdbapi.com/?t=" + movieSearch + "&apikey=" + keys.OMDBKey;
 
 		// call OMDB and get movie
-		request.get({ url: movieQueryURL }, function(err, movie) {
+		request(movieQueryURL, function(err, movie) {
 
 		    if(err) {
 
@@ -155,16 +197,35 @@ function doStuff() {
 		    parsedResponse = JSON.parse(movie.body);
 
 		    console.log("Title: " + parsedResponse.Title);
+			stringToWrite += (parsedResponse.Title + "\n");
 		    console.log("Year: " + parsedResponse.Year);
+			stringToWrite += (parsedResponse.Year + "\n");
 		    console.log("IMDB Rating: " + parsedResponse.imdbRating);
+			stringToWrite += (parsedResponse.imdbRating + "\n");
 		    console.log("Rotten Tomatoes Rating: " + parsedResponse.Ratings[1].Value);
+			stringToWrite += (parsedResponse.Ratings[1].Value + "\n");
 		    console.log("Country: " + parsedResponse.Country);
+			stringToWrite += (parsedResponse.Country + "\n");
 		    console.log("Language: " + parsedResponse.Language);
+			stringToWrite += (parsedResponse.Languages + "\n");
 		    console.log("Plot: " + parsedResponse.Plot);
+			stringToWrite += (parsedResponse.Plot + "\n");
 		    console.log("Actors: " + parsedResponse.Actors);
+			stringToWrite += (parsedResponse.Actors + "\n");
+
+			writeToLog();
 		});
 	}
 }
 
-// program execution starts here
-doStuff();
+function writeToLog() {
+	
+	fs.appendFile("log.txt", stringToWrite, function(err) {
+		
+			if(err) {
+				return console.log(err);
+			}
+	
+			console.log("\nwrote:\n\"" + stringToWrite + "\" to log.txt");
+		});
+}
