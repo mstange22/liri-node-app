@@ -40,7 +40,7 @@ if(process.argv[2] === "do-what-it-says") {
 
         if(error) {
 
-            console.log(error)
+            return console.log(error)
         }
 
         else {
@@ -166,4 +166,5 @@ function doStuff() {
 	}
 }
 
+// program execution starts here
 doStuff();
