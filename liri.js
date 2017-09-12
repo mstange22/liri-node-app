@@ -85,7 +85,6 @@ function doStuff() {
 
 		 		console.log(JSON.stringify(error));
 			}
-
 		});
 	}
 
@@ -103,7 +102,7 @@ function doStuff() {
 			spotifySearch = defaultTrack;
 		}
 
-		spotify.search({ type: 'track', query: spotifySearch }, function(error, data) {
+		spotify.search({ type: 'track', query: spotifySearch, limit: 20 }, function(error, data) {
 	 
 	 		if (error) {
 
@@ -148,18 +147,22 @@ function doStuff() {
 				// first get all artists
 				for(i = 0; i < data.tracks.items[0].artists.length; i++) {
 
-					console.log("Artist(s): " + data.tracks.items[0].artists[i].name);
-					stringToWrite += (data.tracks.items[0].artists[i].name + "\n");
+					console.log("Artist: " + data.tracks.items[0].artists[i].name);
+					stringToWrite += ("Artist: " + data.tracks.items[0].artists[i].name + "\n");
 				}
 
 				console.log("Title: " + data.tracks.items[0].name);
-				stringToWrite += (data.tracks.items[0].name + "\n");
+				stringToWrite += ("Title: " + data.tracks.items[0].name + "\n");
 
 				console.log("Spotify Preview Link: " + data.tracks.items[0].preview_url);
-				stringToWrite += (data.tracks.items[0].preview_url + "\n");
+				stringToWrite += ("Spotify Preview Link: " + data.tracks.items[0].preview_url + "\n");
 
-				console.log("Album: " + data.tracks.items[i].album.name);
-				stringToWrite += (data.tracks.items[0].album.name + "\n");				
+				// spotify external url
+				// console.log("Spotify External URL: " + data.tracks.items[0].external_urls.spotify);
+				// stringToWrite += (data.tracks.items[0].external_urls.spotify + "\n");
+
+				console.log("Album: " + data.tracks.items[0].album.name);
+				stringToWrite += ("Album: " + data.tracks.items[0].album.name + "\n");				
 			}
 
 			// space
@@ -226,6 +229,6 @@ function writeToLog() {
 				return console.log(err);
 			}
 	
-			console.log("\nwrote:\n\"" + stringToWrite + "\" to log.txt");
+			// console.log("\nwrote:\n\"" + stringToWrite + "\" to log.txt");
 		});
 }
