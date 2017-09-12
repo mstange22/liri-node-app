@@ -1,6 +1,13 @@
 const keys = require("./keys");
 
+const defaultTrack = "The Sign";
+const defaultArtist = "Ace of Base";
+const defaultMovie = "Mr. Nobody";
+
 var Twitter = require("twitter");
+var Spotify = require("node-spotify-api");
+var request = require("request");
+var fs = require("fs");
 	 
 var twitterClient = new Twitter({
   consumer_key: keys.twitterKeys.consumer_key,
@@ -11,56 +18,37 @@ var twitterClient = new Twitter({
  
 var twitterParams = {screen_name: "Mike_Bootcamp"};
 
-var Spotify = require("node-spotify-api");
- 
 var spotify = new Spotify({
 	id: keys.spotifyKeys.client_id,
 	secret: keys.spotifyKeys.client_secret
 });
 
-const defaultTrack = "The Sign";
-const defaultArtist = "Ace of Base";
 var spotifySearch;
 var foundFlag = false;
-
-var request = require("request");
-
-const defaultMovie = "Mr. Nobody";
 var movieSearch;
 var movieQueryURL;
 var parsedResponse;
-
-var fs = require("fs");
 var incomingData = [];
 var stringToWrite ="Log Entry:\n";
 
-// program execution starts here
-doStuff();
-
-// if args are to be read from file
-if(process.argv[2] === "do-what-it-says") {
-
-	// open random.txt
-	fs.readFile("random.txt", function(error,data) {
-
-        if(error) {
-
-            return console.log(error)
-        }
-
-        else {
-
-        	incomingData = data.toString().split(",");
-
-			process.argv[2] = incomingData[0];
-			process.argv[3] = incomingData[1];
-
-			doStuff();
-        }
-    });
+/*
+ * writeToLog()
+ * append stringToWrite to log.txt
+ */
+function writeToLog() {
+	
+	fs.appendFile("log.txt", stringToWrite + "\n", function(err) {
+		
+			if(err) {
+				return console.log(err);
+			}
+	});
 }
 
-// this is where the magic happens.
+/*
+ * doStuff()
+ * this is where the magic happens.
+ */
 function doStuff() {
 
 	// twitter
@@ -165,9 +153,6 @@ function doStuff() {
 				stringToWrite += ("Album: " + data.tracks.items[0].album.name + "\n");				
 			}
 
-			// space
-			console.log();
-
 			// write stringToWrite
 			writeToLog();
 		});
@@ -221,14 +206,31 @@ function doStuff() {
 	}
 }
 
-function writeToLog() {
-	
-	fs.appendFile("log.txt", stringToWrite, function(err) {
-		
-			if(err) {
-				return console.log(err);
-			}
-	
-			// console.log("\nwrote:\n\"" + stringToWrite + "\" to log.txt");
-		});
+// check to see if args are to be read from file...
+if(process.argv[2] === "do-what-it-says") {
+
+	// open random.txt
+	fs.readFile("random.txt", function(error,data) {
+
+        if(error) {
+
+            return console.log(error)
+        }
+
+        else {
+
+        	incomingData = data.toString().split(",");
+
+			process.argv[2] = incomingData[0];
+			process.argv[3] = incomingData[1];
+
+			doStuff();
+        }
+    });
+}
+
+// ...otherwise program execution starts here
+else {
+
+	doStuff();
 }
