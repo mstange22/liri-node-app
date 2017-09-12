@@ -54,7 +54,7 @@ function doStuff() {
 	// twitter
 	if(process.argv[2] === "my-tweets") {
 
-		// show last 20 tweets
+		// get tweets
 		twitterClient.get('statuses/user_timeline', twitterParams, function(error, tweets, response) {
 
 		 	if (!error) {
@@ -75,7 +75,7 @@ function doStuff() {
 		});
 	}
 
-	// spotify
+	// spotify search
 	if(process.argv[2] === "spotify-this-song") {
 
 		// if command line arg
@@ -122,6 +122,7 @@ function doStuff() {
 							console.log("Album: " + data.tracks.items[i].album.name);
 							stringToWrite += (data.tracks.items[i].album.name + "\n");
 
+							// set flag to true to stop search
 							foundFlag = true;
 						}
 					}
@@ -129,10 +130,8 @@ function doStuff() {
 			}
 
 			else {
-
-				// display first track info
 				
-				// first get all artists
+				// get all artists
 				for(i = 0; i < data.tracks.items[0].artists.length; i++) {
 
 					console.log("Artist: " + data.tracks.items[0].artists[i].name);
@@ -145,10 +144,6 @@ function doStuff() {
 				console.log("Spotify Preview Link: " + data.tracks.items[0].preview_url);
 				stringToWrite += ("Spotify Preview Link: " + data.tracks.items[0].preview_url + "\n");
 
-				// spotify external url
-				// console.log("Spotify External URL: " + data.tracks.items[0].external_urls.spotify);
-				// stringToWrite += (data.tracks.items[0].external_urls.spotify + "\n");
-
 				console.log("Album: " + data.tracks.items[0].album.name);
 				stringToWrite += ("Album: " + data.tracks.items[0].album.name + "\n");				
 			}
@@ -158,7 +153,7 @@ function doStuff() {
 		});
 	}
 
-	// OMDB
+	// OMDB search
 	if(process.argv[2] === "movie-this") {
 
 		// check process.argv[3] for movie name, then display:
@@ -175,15 +170,16 @@ function doStuff() {
 		movieQueryURL = "http://www.omdbapi.com/?t=" + movieSearch + "&apikey=" + keys.OMDBKey;
 
 		// call OMDB and get movie
-		request(movieQueryURL, function(err, movie) {
+		request(movieQueryURL, function(error, movie) {
 
-		    if(err) {
+		    if(error) {
 
-		        return console.error(err);
+		        return console.error(error);
 		    }
 
 		    parsedResponse = JSON.parse(movie.body);
 
+		    //display to console and build stringToWrite
 		    console.log("Title: " + parsedResponse.Title);
 			stringToWrite += (parsedResponse.Title + "\n");
 		    console.log("Year: " + parsedResponse.Year);
@@ -201,6 +197,7 @@ function doStuff() {
 		    console.log("Actors: " + parsedResponse.Actors);
 			stringToWrite += (parsedResponse.Actors + "\n");
 
+			// write stringToWrite
 			writeToLog();
 		});
 	}
@@ -229,7 +226,7 @@ if(process.argv[2] === "do-what-it-says") {
     });
 }
 
-// ...otherwise program execution starts here
+// ...else program execution starts here
 else {
 
 	doStuff();
