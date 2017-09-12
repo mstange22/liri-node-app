@@ -18,14 +18,14 @@ var spotify = new Spotify({
 	secret: keys.spotifyKeys.client_secret
 });
 
-var defaultTrack = "The Sign";
-var defaultArtist = "Ace of Base";
+const defaultTrack = "The Sign";
+const defaultArtist = "Ace of Base";
 var spotifySearch;
 var foundFlag = false;
 
 var request = require("request");
 
-var defaultMovie = "Mr. Nobody";
+const defaultMovie = "Mr. Nobody";
 var movieSearch;
 var movieQueryURL;
 var parsedResponse;
@@ -91,6 +91,7 @@ function doStuff() {
 	// spotify
 	if(process.argv[2] === "spotify-this-song") {
 
+		// if command line arg
 		if(process.argv[3]) {
 
 			spotifySearch = process.argv[3];
@@ -98,7 +99,7 @@ function doStuff() {
 
 		else {
 
-			// default search: "The Sign" by Ace of Base
+			// else default search ("The Sign" by Ace of Base)
 			spotifySearch = defaultTrack;
 		}
 
