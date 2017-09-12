@@ -4,10 +4,11 @@ const defaultTrack = "The Sign";
 const defaultArtist = "Ace of Base";
 const defaultMovie = "Mr. Nobody";
 
-var Twitter = require("twitter");
-var Spotify = require("node-spotify-api");
-var request = require("request");
-var fs = require("fs");
+const Twitter = require("twitter");
+const Spotify = require("node-spotify-api");
+const request = require("request");
+const fs = require("fs");
+const moment = require("moment");
 	 
 var twitterClient = new Twitter({
   consumer_key: keys.twitterKeys.consumer_key,
@@ -29,15 +30,19 @@ var movieSearch;
 var movieQueryURL;
 var parsedResponse;
 var incomingData = [];
-var stringToWrite ="Log Entry:\n";
+var stringToWrite ="Log Entry: " + moment().format("dddd, MMMM Do YYYY, h:mm:ss a") + "\n";
 
 /*
  * writeToLog()
  * append stringToWrite to log.txt
  */
 function writeToLog() {
+
+	for(var i = 0; i < 80; i++) {
+		stringToWrite += "=";
+	}
 	
-	fs.appendFile("log.txt", stringToWrite + "\n", function(err) {
+	fs.appendFile("log.txt", stringToWrite + "\n", "utf8", function(err) {
 		
 			if(err) {
 				return console.log(err);
@@ -138,11 +143,16 @@ function doStuff() {
 					stringToWrite += ("Artist: " + data.tracks.items[0].artists[i].name + "\n");
 				}
 
+				// console.log(data.tracks.items[0]);
+
 				console.log("Title: " + data.tracks.items[0].name);
 				stringToWrite += ("Title: " + data.tracks.items[0].name + "\n");
 
 				console.log("Spotify Preview Link: " + data.tracks.items[0].preview_url);
 				stringToWrite += ("Spotify Preview Link: " + data.tracks.items[0].preview_url + "\n");
+
+				console.log("Spotify Open Link: " + data.tracks.items[0].external_urls.spotify);
+				stringToWrite += ("Spotify Open Link: " + data.tracks.items[0].external_urls.spotify + "\n");
 
 				console.log("Album: " + data.tracks.items[0].album.name);
 				stringToWrite += ("Album: " + data.tracks.items[0].album.name + "\n");				
@@ -191,7 +201,7 @@ function doStuff() {
 		    console.log("Country: " + parsedResponse.Country);
 			stringToWrite += (parsedResponse.Country + "\n");
 		    console.log("Language: " + parsedResponse.Language);
-			stringToWrite += (parsedResponse.Languages + "\n");
+			stringToWrite += (parsedResponse.Language + "\n");
 		    console.log("Plot: " + parsedResponse.Plot);
 			stringToWrite += (parsedResponse.Plot + "\n");
 		    console.log("Actors: " + parsedResponse.Actors);
