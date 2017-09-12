@@ -55,7 +55,6 @@ if(process.argv[2] === "do-what-it-says") {
 			process.argv[2] = incomingData[0];
 			process.argv[3] = incomingData[1];
 
-			// console.log(process.argv[2], process.argv[3]);
 			doStuff();
         }
     });
