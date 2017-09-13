@@ -12,4 +12,4 @@ This is a command line application that takes in parameters to determine the app
 
 node packages used: twitter, spotify, request (OMDB) & fs (file i/o).
 
-All info is written (appended) to a local text file, log.txt.
+All info is written (appended) to a local text file, log.txt, timestamped via moment.js.
