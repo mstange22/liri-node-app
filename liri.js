@@ -25,6 +25,7 @@ var spotify = new Spotify({
 });
 
 var spotifySearch;
+var spotifyArtist;
 var foundFlag = false;
 var movieSearch;
 var movieQueryURL;
@@ -43,10 +44,10 @@ function writeToLog() {
 	}
 	
 	fs.appendFile("log.txt", stringToWrite + "\n", "utf8", function(err) {
-		
-			if(err) {
-				return console.log(err);
-			}
+	
+		if(err) {
+			return console.log(err);
+		}
 	});
 }
 
@@ -83,10 +84,16 @@ function doStuff() {
 	// spotify search
 	if(process.argv[2] === "spotify-this-song") {
 
-		// if command line arg
+		// if command line arg...
 		if(process.argv[3]) {
 
 			spotifySearch = process.argv[3];
+
+			// ...and artist arg in pos 4
+			if(process.argv[4]) {
+
+				spotifyArtist = process.argv[4];
+			}
 		}
 
 		else {
@@ -95,14 +102,14 @@ function doStuff() {
 			spotifySearch = defaultTrack;
 		}
 
-		spotify.search({ type: 'track', query: spotifySearch, limit: 20 }, function(error, data) {
+		spotify.search({ type: 'track', query: "\"" + spotifySearch + "\"", limit: 20 }, function(error, data) {
 	 
 	 		if (error) {
 
 	 			return console.log('Error occurred: ' + error);
 	 		}
 
-			if(spotifySearch === defaultTrack) {
+			if(spotifySearch === defaultTrack || spotifyArtist) {
 
 				// loop through "items" array...
 				for(var i = 0; i < data.tracks.items.length && !foundFlag; i++) {
@@ -110,8 +117,9 @@ function doStuff() {
 					// ...then through artist(s)
 					for(var j = 0; j < data.tracks.items[i].artists.length && !foundFlag; j++) {
 
-						// find "Ace of Base"
-						if(data.tracks.items[i].artists[j].name === defaultArtist) {
+						// find "Ace of Base" or artist arg
+						if(data.tracks.items[i].artists[j].name === defaultArtist  || 
+							(spotifyArtist && data.tracks.items[i].artists[j].name === spotifyArtist)) {
 
 							console.log("Artist(s): " + data.tracks.items[i].artists[j].name);
 							stringToWrite += ("Artist(s): " + data.tracks.items[i].artists[j].name + "\n");
@@ -136,26 +144,27 @@ function doStuff() {
 
 			else {
 				
-				// get all artists
-				for(i = 0; i < data.tracks.items[0].artists.length; i++) {
+				// loop through all tracks...
+				for(i = 0; i < data.tracks.items.length; i++) {
 
-					console.log("Artist: " + data.tracks.items[0].artists[i].name);
-					stringToWrite += ("Artist: " + data.tracks.items[0].artists[i].name + "\n");
+					// then get all artists
+					for(j = 0; j < data.tracks.items[i].artists.length; j++) {
+						console.log("Artist: " + data.tracks.items[i].artists[j].name);
+						stringToWrite += ("Artist: " + data.tracks.items[i].artists[j].name + "\n");
+					}
+					
+					console.log("Title: " + data.tracks.items[i].name);
+					stringToWrite += ("Title: " + data.tracks.items[i].name + "\n");
+
+					console.log("Spotify Preview Link: " + data.tracks.items[i].preview_url);
+					stringToWrite += ("Spotify Preview Link: " + data.tracks.items[i].preview_url + "\n");
+
+					console.log("Spotify Open Link: " + data.tracks.items[i].external_urls.spotify);
+					stringToWrite += ("Spotify Open Link: " + data.tracks.items[i].external_urls.spotify + "\n");
+
+					console.log("Album: " + data.tracks.items[i].album.name + "\n");
+					stringToWrite += ("Album: " + data.tracks.items[i].album.name + "\n\n");
 				}
-
-				// console.log(data.tracks.items[0]);
-
-				console.log("Title: " + data.tracks.items[0].name);
-				stringToWrite += ("Title: " + data.tracks.items[0].name + "\n");
-
-				console.log("Spotify Preview Link: " + data.tracks.items[0].preview_url);
-				stringToWrite += ("Spotify Preview Link: " + data.tracks.items[0].preview_url + "\n");
-
-				console.log("Spotify Open Link: " + data.tracks.items[0].external_urls.spotify);
-				stringToWrite += ("Spotify Open Link: " + data.tracks.items[0].external_urls.spotify + "\n");
-
-				console.log("Album: " + data.tracks.items[0].album.name);
-				stringToWrite += ("Album: " + data.tracks.items[0].album.name + "\n");				
 			}
 
 			// write stringToWrite
