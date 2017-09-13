@@ -150,6 +150,8 @@ function doStuff() {
 				// loop through all tracks, displaying info about each one...
 				for(i = 0; i < data.tracks.items.length; i++) {
 
+					console.log("Track #" + (i + 1));
+					stringToWrite += ("Track #" + (i + 1) + "\n");
 					// make sure to  get ALL artists for each track
 					for(j = 0; j < data.tracks.items[i].artists.length; j++) {
 						console.log("Artist: " + data.tracks.items[i].artists[j].name);

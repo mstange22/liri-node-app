@@ -1,167 +1,146 @@
-Log Entry: Wednesday, September 13th 2017, 10:03:55 am
-Mr. Nobody
-2009
-7.9
-64%
-Belgium, Germany, Canada, France, USA, UK
-English, Mohawk
-A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
-Jared Leto, Sarah Polley, Diane Kruger, Linh Dan Pham
-================================================================================
-Log Entry: Wednesday, September 13th 2017, 10:04:09 am
-Artist(s): Ace of Base
-Title: The Sign
-Spotify Preview Link: https://p.scdn.co/mp3-preview/4c463359f67dd3546db7294d236dd0ae991882ff?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Album: The Sign (US Album) [Remastered]
-================================================================================
-Log Entry: Wednesday, September 13th 2017, 10:04:23 am
-This is tweets[1].
-Hello, World!
-================================================================================
-Log Entry: Wednesday, September 13th 2017, 3:46:00 pm
-Artist: Ciara
-Artist: Missy Elliott
-Title: One, Two Step
-Spotify Preview Link: https://p.scdn.co/mp3-preview/ebc79c6e835bd18a744307d51c942a749e3ad2ca?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/7uKcScNXuO3MWw6LowBjW1
-Album: Goodies
-================================================================================
-Log Entry: Wednesday, September 13th 2017, 3:59:28 pm
-Artist: Ciara
-Artist: Missy Elliott
-Title: One, Two Step
-Spotify Preview Link: https://p.scdn.co/mp3-preview/ebc79c6e835bd18a744307d51c942a749e3ad2ca?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/7uKcScNXuO3MWw6LowBjW1
-Album: Goodies
+Log Entry: Wednesday, September 13th 2017, 4:49:55 pm
+Track #1
+Artist: Backstreet Boys
+Title: I Want It That Way
+Spotify Preview Link: https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/6e40mgJiCid5HRAGrbpGA6
+Album: The Hits--Chapter One
 
-Artist: Wifisfuneral
-Title: 2 Step
+Track #2
+Artist: Backstreet Boys
+Title: I Want It That Way
+Spotify Preview Link: https://p.scdn.co/mp3-preview/f9f504a705fcaaf2f24b004b629725451014ad6c?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/68y6OIiE1nDdI1MLQdJNh8
+Album: The Essential Backstreet Boys
+
+Track #3
+Artist: Backstreet Boys
+Title: I Want It That Way
+Spotify Preview Link: https://p.scdn.co/mp3-preview/b8c2410a5acb68b462be6ac85f1312430e2b149c?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/47BBI51FKFwOMlIiX6m8ya
+Album: Millennium
+
+Track #4
+Artist: Manuel Costa
+Title: I Want It That Way
+Spotify Preview Link: https://p.scdn.co/mp3-preview/cdde86f49ca4ef217ac08bbbb0c6295c16f015b0?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/50Xq1wZRU5TfwjKlK6j4Gb
+Album: I Want It That Way
+
+Track #5
+Artist: Anthem Lights
+Title: I Want It That Way
+Spotify Preview Link: https://p.scdn.co/mp3-preview/4a163fbfa2dbbe4433f277e0e7395dca656364f5?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/3Ww6kEWxLh4Ub4WPJ9hMtA
+Album: Covers Part IV
+
+Track #6
+Artist: Glee Cast
+Title: Bye Bye Bye / I Want It That Way (Glee Cast Version)
+Spotify Preview Link: https://p.scdn.co/mp3-preview/3aa63b5c98b98ae333e567813e5c720abb2914f0?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/3t7m7AzV2ntuI9fIT6KREP
+Album: Bye Bye Bye / I Want It That Way (Glee Cast Version)
+
+Track #7
+Artist: Backstreet Boys
+Title: I Want It That Way
+Spotify Preview Link: https://p.scdn.co/mp3-preview/2f96341eb8415a3efb27375db1c4d59928408c2f?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/1zCiqxhampG4dcC7HEqPu5
+Album: 90 Sweet 90s Hits!
+
+Track #8
+Artist: Dynamite Boy
+Title: I Want It That Way
 Spotify Preview Link: null
-Spotify Open Link: https://open.spotify.com/track/5KRodDC46zAvduTMh8E1sO
-Album: 2 Step
+Spotify Open Link: https://open.spotify.com/track/0F5f29urvisi4TiwJOQZWN
+Album: Punk Goes Pop
 
-Artist: Dave Matthews Band
-Title: Two Step
-Spotify Preview Link: https://p.scdn.co/mp3-preview/ec3c5640b02a9ff600995c34f5128d9472041be7?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/2Ou1Hyvr08mr0pZauPvv6j
-Album: Crash
+Track #9
+Artist: "Weird Al" Yankovic
+Title: Ebay (Parody of "I Want It That Way" by the Backstreet Boys)
+Spotify Preview Link: https://p.scdn.co/mp3-preview/bc986c27b684adbc13837a5de25f14d4dbe0cc3c?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/4vHb50VkxDzHYwLiHfWczK
+Album: Poodle Hat
 
-Artist: Tomppabeats
-Title: One Two Step
-Spotify Preview Link: https://p.scdn.co/mp3-preview/5e075d6e2558d5de3511716382ae8f536ff3b597?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/5RBSjHMYeUZo1N21tqUnn9
-Album: Chillhop Essentials Spring 2017
+Track #10
+Artist: Boyce Avenue
+Title: I Want It That Way
+Spotify Preview Link: https://p.scdn.co/mp3-preview/764f1dcb8c9a9cec099cc361cb388f931bf023d3?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/4YmJGDRo6oGhObb7MaW5om
+Album: New Acoustic Sessions, Vol. 3
 
-Artist: Unk
-Artist: T-Pain
-Artist: Jim Jones
-Artist: E-40
-Title: 2 Step (feat. T-Pain, Jim Jones & E-40)
-Spotify Preview Link: https://p.scdn.co/mp3-preview/c322b9267fb41ba97d73754bf0da80bc861e4d7e?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/34vVztCAeKpPtzYfGHQjiV
-Album: Beat'n Down Yo Block (Deluxe)
+Track #11
+Artist: Kyle Olthoff
+Artist: Destiny Jenkins
+Title: I Want It That Way
+Spotify Preview Link: https://p.scdn.co/mp3-preview/101776fe4fc24aac543f6b4c5aa4273ac9d2dcc4?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/1UUw0IsDzxCxJ6v0dlygUy
+Album: I Want It That Way
 
-Artist: DJ Jazzy Jeff
-Artist: Masego
-Artist: Rhymefest
-Title: 2 Step
-Spotify Preview Link: https://p.scdn.co/mp3-preview/2336af800efb43b7937b92f66a1b478cb255d43e?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/7ih639ZGaM0oAYoBkjRUlf
-Album: 2 Step
+Track #12
+Artist: Landon Austin & Julia Sheer
+Title: I Want It That Way
+Spotify Preview Link: https://p.scdn.co/mp3-preview/e777be5446dc3df34abc2eaec241edb5a590976c?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/1zUJq8Ap2u9MyDo0HJxVU5
+Album: I Want It That Way
 
-Artist: Unk
-Title: 2 Step
-Spotify Preview Link: https://p.scdn.co/mp3-preview/4d8d9c1dd3d8a8c71445cd2a302ad56828c77b26?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/5THuNkdzhodt7AQCgM3aST
-Album: Beat'n Down Yo Block (Deluxe)
+Track #13
+Artist: "Weird Al" Yankovic
+Title: Ebay (Parody of "I Want It That Way" by the Backstreet Boys)
+Spotify Preview Link: https://p.scdn.co/mp3-preview/5632d8e302d70afaa8f79c962aa4b2032a45b3ef?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/1vaico2C72imYowF4Kv04V
+Album: The Essential "Weird Al" Yankovic
 
-Artist: Mike Stidolph
-Title: Classic Country Two Step
-Spotify Preview Link: https://p.scdn.co/mp3-preview/8d759fb828aba58f46431c50b8548123b30c0c79?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/1ol85pdhxIKNP5u9HuAXBf
-Album: Vintage Plug 60: Session 26 - Country Classics, Vol. 2
-
-Artist: Unk
-Title: 2 Step
-Spotify Preview Link: https://p.scdn.co/mp3-preview/80a2257901981c0b82ae38c5b5b41b009c9d555f?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/1ohz20hlIQjmXKhm9CQAmI
-Album: Beat'n Down Yo Block
-
-Artist: Laura Bell Bundy
-Artist: Colt Ford
-Title: Two Step
+Track #14
+Artist: Steel Panther
+Title: I Want It That Way
 Spotify Preview Link: null
-Spotify Open Link: https://open.spotify.com/track/5QyuwOExm6YydYTqQ2BW3c
-Album: Another Piece Of Me
+Spotify Open Link: https://open.spotify.com/track/0448cNUvZGCAlUpIPO5kdY
+Album: I Want It That Way
 
-Artist: Aaron Watson
-Title: One Two Step at a Time
-Spotify Preview Link: https://p.scdn.co/mp3-preview/2e8416bafd4fb9f9a820f9b6794e3f6d6f036506?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/4MN4VZQpflZHf34GBrBfzK
-Album: Vaquero
+Track #15
+Artist: Backstreet Boys
+Title: I Want It That Way
+Spotify Preview Link: https://p.scdn.co/mp3-preview/c9302062adf4f59e60335f30c7ca46b487a267fb?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/75W4IDdKhHvRQZpaDx9YPg
+Album: NOW That's What I Call 90s Pop
 
-Artist: Ciara
-Artist: Missy Elliott
-Title: 1, 2 Step - Don Candiani Reggaeton Mix
-Spotify Preview Link: https://p.scdn.co/mp3-preview/5a2e1e932b4c50e5ef919d8231f99422031467e9?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/3x9LFpV6tzq0qWaBMvY2UT
-Album: DVD Bonus Audio (from Goodies. The Videos and More!)
+Track #16
+Artist: Backstreet Boys
+Title: I Want It That Way
+Spotify Preview Link: https://p.scdn.co/mp3-preview/adf2485de3f3f375593b5307a792e8d8e6f19794?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/2KMwtsWwL5QDtSpm814tju
+Album: NKOTBSB
 
-Artist: Dave Matthews Band
-Title: Two Step
-Spotify Preview Link: https://p.scdn.co/mp3-preview/5f2c5214e06bb10e2195f3f1596d1d3f53a6c9a7?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/5rl7CJqMoFMfgvTcuANfnF
-Album: Live At Red Rocks 8.15.95
+Track #17
+Artist: Scott Bradlee's Postmodern Jukebox
+Artist: Shoshana Bean
+Title: I Want It That Way
+Spotify Preview Link: https://p.scdn.co/mp3-preview/53296f4b689baaa0be6d94e8720c044e98d4b3e3?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/1Le3uYU5NU9cXXtYeSWnEM
+Album: Selfies on Kodachrome
 
-Artist: Dave Matthews
-Artist: Tim Reynolds
-Title: Two Step - Live At Radio City
-Spotify Preview Link: https://p.scdn.co/mp3-preview/848412485b463a9d278bba0ffb76540e2acb10d4?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/1vpkbZQWzv170Rap9lmm1h
-Album: Live At Radio City
+Track #18
+Artist: Kaiak
+Title: I Want It That Way - Acoustic
+Spotify Preview Link: https://p.scdn.co/mp3-preview/6aa034496f6f07cb425d1ff8d0e2a2f8d61acfbc?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/1o6kZhVH06xaWEzdCt4ExL
+Album: I Want It That Way (Acoustic)
 
-Artist: Dave Matthews Band
-Title: Two Step
-Spotify Preview Link: https://p.scdn.co/mp3-preview/5123216e7b1a9a2a671be0276a4759903cad335f?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/5LhIJ9zT3DL8bJyBkyixqR
-Album: The Central Park Concert
+Track #19
+Artist: Scott Bradlee's Postmodern Jukebox
+Artist: Shoshana Bean
+Title: I Want It That Way
+Spotify Preview Link: https://p.scdn.co/mp3-preview/53296f4b689baaa0be6d94e8720c044e98d4b3e3?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/6FNTpwQU3VNZvezUPYMjPY
+Album: PMJ Is For Lovers: The Love Song Collection
 
-Artist: Laura Bell Bundy
-Artist: Colt Ford
-Title: Two Step
-Spotify Preview Link: null
-Spotify Open Link: https://open.spotify.com/track/3WNT8snbBiOGIxRxnkCfQ5
-Album: Dance Y'all Volume 1 (Vol. 1)
+Track #20
+Artist: Jason Chen
+Artist: Joseph Vincent
+Title: I Want It That Way
+Spotify Preview Link: https://p.scdn.co/mp3-preview/cba62099b5bec2bc9244aaeaba0422556f6df04e?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
+Spotify Open Link: https://open.spotify.com/track/3YugF8eBqmkUDLwFvTfCVB
+Album: I Want It That Way
 
-Artist: Murs
-Artist: King Fantastic
-Title: Two Step
-Spotify Preview Link: https://p.scdn.co/mp3-preview/d5d98db0ae4822f74c3e92c3856c0d66937727fe?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/5bvJAPmfrfu9s8G2Vc9b3k
-Album: Have a Nice Life
-
-Artist: Dave Matthews Band
-Title: Two Step - Live At Wrigley Field
-Spotify Preview Link: https://p.scdn.co/mp3-preview/0fe473533d5b75a955474a48a0aa5dcedd927aa8?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/49iMLVgaIWLsQHnmW6Skqv
-Album: Live At Wrigley Field
-
-Artist: Gyyps
-Title: Two Step
-Spotify Preview Link: https://p.scdn.co/mp3-preview/bad991b1d86ffb663ac0fdd73ab2ea1dbd8c9326?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/742gr3gvl0Iir8BFboSzWX
-Album: Canoga Park EP
-
-Artist: Ent.Distrikt
-Title: Same Ole 2 Step
-Spotify Preview Link: https://p.scdn.co/mp3-preview/cc6d6ebbb8448244a984a17c048b73fee6da45ec?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Spotify Open Link: https://open.spotify.com/track/1pcZ7JsafYFDYIasLYwdqM
-Album: Same Ole 2 Step
-
-================================================================================
-Log Entry: Wednesday, September 13th 2017, 4:29:26 pm
-Artist(s): Dave Matthews Band
-Title: Two Step
-Spotify Preview Link: https://p.scdn.co/mp3-preview/ec3c5640b02a9ff600995c34f5128d9472041be7?cid=7f12de8a0ccb4f4aa6b395c0e3d5ad58
-Album: Crash
 ================================================================================
