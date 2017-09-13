@@ -114,18 +114,18 @@ function doStuff() {
 						if(data.tracks.items[i].artists[j].name === defaultArtist) {
 
 							console.log("Artist(s): " + data.tracks.items[i].artists[j].name);
-							stringToWrite += (data.tracks.items[i].artists[j].name + "\n");
+							stringToWrite += ("Artist(s): " + data.tracks.items[i].artists[j].name + "\n");
 									
 							console.log("Title: " + data.tracks.items[i].name);
-							stringToWrite += (data.tracks.items[i].name + "\n");
+							stringToWrite += ("Title: " + data.tracks.items[i].name + "\n");
 
 							// preview link
 							console.log("Spotify Preview Link: " + data.tracks.items[i].preview_url);
-							stringToWrite += (data.tracks.items[i].preview_url + "\n");
+							stringToWrite += ("Spotify Preview Link: " + data.tracks.items[i].preview_url + "\n");
 
 							// album name
 							console.log("Album: " + data.tracks.items[i].album.name);
-							stringToWrite += (data.tracks.items[i].album.name + "\n");
+							stringToWrite += ("Album: " + data.tracks.items[i].album.name + "\n");
 
 							// set flag to true to stop search
 							foundFlag = true;
