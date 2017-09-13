@@ -109,6 +109,7 @@ function doStuff() {
 	 			return console.log('Error occurred: ' + error);
 	 		}
 
+			// if it's a targeted artist search (default or artist parameter)
 			if(spotifySearch === defaultTrack || spotifyArtist) {
 
 				// loop through "items" array...
