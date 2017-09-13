@@ -117,7 +117,7 @@ function doStuff() {
 					// ...then through artist(s)
 					for(var j = 0; j < data.tracks.items[i].artists.length && !foundFlag; j++) {
 
-						// find "Ace of Base" or artist arg
+						// find "Ace of Base" or artist passed via argv[4]
 						if(data.tracks.items[i].artists[j].name === defaultArtist  || 
 							(spotifyArtist && data.tracks.items[i].artists[j].name === spotifyArtist)) {
 
@@ -130,6 +130,9 @@ function doStuff() {
 							// preview link
 							console.log("Spotify Preview Link: " + data.tracks.items[i].preview_url);
 							stringToWrite += ("Spotify Preview Link: " + data.tracks.items[i].preview_url + "\n");
+
+							console.log("Spotify Open Link: " + data.tracks.items[i].external_urls.spotify);
+							stringToWrite += ("Spotify Open Link: " + data.tracks.items[i].external_urls.spotify + "\n");
 
 							// album name
 							console.log("Album: " + data.tracks.items[i].album.name);
@@ -144,10 +147,10 @@ function doStuff() {
 
 			else {
 				
-				// loop through all tracks...
+				// loop through all tracks, displaying info about each one...
 				for(i = 0; i < data.tracks.items.length; i++) {
 
-					// then get all artists
+					// make sure to  get ALL artists for each track
 					for(j = 0; j < data.tracks.items[i].artists.length; j++) {
 						console.log("Artist: " + data.tracks.items[i].artists[j].name);
 						stringToWrite += ("Artist: " + data.tracks.items[i].artists[j].name + "\n");
