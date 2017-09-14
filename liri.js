@@ -17,7 +17,7 @@ var twitterClient = new Twitter({
   access_token_secret: keys.twitterKeys.token_secret,
 });
  
-var twitterParams = {screen_name: "Mike_Bootcamp"};
+var twitterParams = {screen_name: "Mike_Bootcamp", count: 20};
 
 var spotify = new Spotify({
 	id: keys.spotifyKeys.client_id,
@@ -64,6 +64,8 @@ function doStuff() {
 		twitterClient.get('statuses/user_timeline', twitterParams, function(error, tweets, response) {
 
 		 	if (!error) {
+				
+				tweets = tweets.reverse();
 
 		 		for(var i = 0; i < tweets.length && i < 20; i++) {
 				
@@ -110,7 +112,7 @@ function doStuff() {
 	 		}
 
 			// if it's a targeted artist search (default or artist parameter)
-			if(spotifySearch === defaultTrack || spotifyArtist) {
+			if(!process.argv[3] || spotifyArtist) {
 
 				// loop through "items" array...
 				for(var i = 0; i < data.tracks.items.length && !foundFlag; i++) {

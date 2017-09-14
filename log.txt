@@ -1,0 +1,47 @@
+Log Entry: Wednesday, September 13th 2017, 5:30:02 pm
+This is tweets[1].
+================================================================================
+Log Entry: Wednesday, September 13th 2017, 5:36:55 pm
+Last tweet.
+Nineteen.  One more!
+Eighteen.
+Seventeen.
+Sweet sixteen?  Nope.
+Fifteen.  Exciting.
+Fourteen.  Not interesting.
+Baker's Dozen.
+Dozen.
+This one goes to eleven.
+Ten tweets.  Halfway there.
+Nein.
+Eight isn't enough.  I need 12 more.
+Se7en
+Sixth sense &gt; sixth tweet.
+Five gol-den tweets.
+Four.  Four tweets.
+Third tweet can be found in position [2].
+This is tweets[1].
+Hello, World!
+================================================================================
+Log Entry: Wednesday, September 13th 2017, 5:38:26 pm
+Hello, World!
+This is tweets[1].
+Third tweet can be found in position [2].
+Four.  Four tweets.
+Five gol-den tweets.
+Sixth sense &gt; sixth tweet.
+Se7en
+Eight isn't enough.  I need 12 more.
+Nein.
+Ten tweets.  Halfway there.
+This one goes to eleven.
+Dozen.
+Baker's Dozen.
+Fourteen.  Not interesting.
+Fifteen.  Exciting.
+Sweet sixteen?  Nope.
+Seventeen.
+Eighteen.
+Nineteen.  One more!
+Last tweet.
+================================================================================
