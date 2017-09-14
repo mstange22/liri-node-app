@@ -111,7 +111,7 @@ function doStuff() {
 	 			return console.log('Error occurred: ' + error);
 	 		}
 
-			// if it's a targeted artist search (default or artist parameter)
+			// if it's a targeted artist search (either default or artist parameter)
 			if(!process.argv[3] || spotifyArtist) {
 
 				// loop through "items" array...
@@ -120,7 +120,7 @@ function doStuff() {
 					// ...then through artist(s)
 					for(var j = 0; j < data.tracks.items[i].artists.length && !foundFlag; j++) {
 
-						// find "Ace of Base" or artist passed via argv[4]
+						// find "Ace of Base" or the artist passed via argv[4]
 						if(data.tracks.items[i].artists[j].name === defaultArtist  || 
 							(spotifyArtist && data.tracks.items[i].artists[j].name === spotifyArtist)) {
 
@@ -153,10 +153,13 @@ function doStuff() {
 				// loop through all tracks, displaying info about each one...
 				for(i = 0; i < data.tracks.items.length; i++) {
 
+					// track info header
 					console.log("Track #" + (i + 1));
 					stringToWrite += ("Track #" + (i + 1) + "\n");
-					// make sure to  get ALL artists for each track
+
+					// make sure to  get all artists for each track
 					for(j = 0; j < data.tracks.items[i].artists.length; j++) {
+
 						console.log("Artist: " + data.tracks.items[i].artists[j].name);
 						stringToWrite += ("Artist: " + data.tracks.items[i].artists[j].name + "\n");
 					}
@@ -175,7 +178,7 @@ function doStuff() {
 				}
 			}
 
-			// write stringToWrite
+			// write stringToWrite to log file
 			writeToLog();
 		});
 	}
@@ -208,23 +211,30 @@ function doStuff() {
 
 		    //display to console and build stringToWrite
 		    console.log("Title: " + parsedResponse.Title);
-			stringToWrite += (parsedResponse.Title + "\n");
-		    console.log("Year: " + parsedResponse.Year);
-			stringToWrite += (parsedResponse.Year + "\n");
-		    console.log("IMDB Rating: " + parsedResponse.imdbRating);
-			stringToWrite += (parsedResponse.imdbRating + "\n");
-		    console.log("Rotten Tomatoes Rating: " + parsedResponse.Ratings[1].Value);
-			stringToWrite += (parsedResponse.Ratings[1].Value + "\n");
-		    console.log("Country: " + parsedResponse.Country);
-			stringToWrite += (parsedResponse.Country + "\n");
-		    console.log("Language: " + parsedResponse.Language);
-			stringToWrite += (parsedResponse.Language + "\n");
-		    console.log("Plot: " + parsedResponse.Plot);
-			stringToWrite += (parsedResponse.Plot + "\n");
-		    console.log("Actors: " + parsedResponse.Actors);
-			stringToWrite += (parsedResponse.Actors + "\n");
+			stringToWrite += ("Title: " + parsedResponse.Title + "\n");
 
-			// write stringToWrite
+		    console.log("Year: " + parsedResponse.Year);
+			stringToWrite += ("Year: " + parsedResponse.Year + "\n");
+
+		    console.log("IMDB Rating: " + parsedResponse.imdbRating);
+			stringToWrite += ("IMDB Rating: " + parsedResponse.imdbRating + "\n");
+
+		    console.log("Rotten Tomatoes Rating: " + parsedResponse.Ratings[1].Value);
+			stringToWrite += ("Rotten Tomatoes Rating: " + parsedResponse.Ratings[1].Value + "\n");
+
+		    console.log("Country: " + parsedResponse.Country);
+			stringToWrite += ("Country: " + parsedResponse.Country + "\n");
+
+		    console.log("Language: " + parsedResponse.Language);
+			stringToWrite += ("Language: " + parsedResponse.Language + "\n");
+
+		    console.log("Plot: " + parsedResponse.Plot);
+			stringToWrite += ("Plot: " + parsedResponse.Plot + "\n");
+
+		    console.log("Actors: " + parsedResponse.Actors);
+			stringToWrite += ("Actors: " + parsedResponse.Actors + "\n");
+
+			// write stringToWrite to log file
 			writeToLog();
 		});
 	}
